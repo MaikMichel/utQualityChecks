@@ -1,0 +1,26 @@
+{
+  "feature": "ut_quality_checks",
+  "version": "0.0.1",
+  "replacers": [
+      {
+          "title": "Target Application Schema",
+          "marker": "{target_schema}",
+          "type": "SCHEMA"
+      }
+  ],
+  "instructions": [
+      {
+          "file": "db/utx/tests/packages/test_apex_page_items_config.pks.initial",
+          "target": "db/{target_schema}/tests/packages/test_apex_page_items_config.pks",
+          "initial": true
+      },
+      {
+          "file": "db/utx/tests/packages/test_apex_page_items.pks",
+          "target": "db/{target_schema}/tests/packages/test_apex_page_items.pks"
+      },
+      {
+          "file": "db/utx/tests/packages/test_apex_page_items.pkb",
+          "target": "db/{target_schema}/tests/packages/test_apex_page_items.pkb"
+      }
+  ]
+}
